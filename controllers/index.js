@@ -12,9 +12,12 @@ function DELETE(req,res){
 
 }
 function POST(req,res){
-      
+
 }
 
 export default{
-      GET
+      GET,
+      POST,
+      DELETE,
+      PUT
 }
