@@ -4,6 +4,8 @@ function GET(req,res){
       res.send("salom getdan")
 }
 
+
 export default{
-      GET
+      GET,
+      PUT
 }
