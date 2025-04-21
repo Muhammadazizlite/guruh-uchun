@@ -5,9 +5,9 @@ import userController from "./controller/users.js"
 const router = Router();
 
 router
-      .get("/users",userController.GET)
-      .post("users",userController.POST)
-      .delete("users/:id",userController.DELETE)
-      .put("/users",userController.PUT)
+      .get("/api/todos/:id",userController.GET)
+      .post("/api/todos",userController.POST)
+      .delete("/api/todos/:id",userController.DELETE)
+      .put("/api/todos",userController.PUT)
 
 export default router
