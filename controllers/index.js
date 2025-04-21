@@ -18,7 +18,22 @@ function DELETE(req,res){
 
 }
 function POST(req,res){
-
+      let body = req.body;    
+      let UserExists = users.find(el => el.id == body.id);
+      if (UserExists) {
+          return res.status(400).json({
+              status: 400,
+              message: 'This User Already Exists'
+          });
+      }
+  
+      users.push(body);
+      fs.writeFileSync('./database/data.json', JSON.stringify(users, null, 2), 'utf-8');
+      return res.status(201).json({
+          status: 201,
+          message: 'User successfully added',
+          data: body
+      });
 }
 
 
